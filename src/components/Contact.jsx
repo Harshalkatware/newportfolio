@@ -1,10 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
-import { Send, Mail, Github, Linkedin, MapPin, CheckCircle } from 'lucide-react'
+import { Send, Mail, Github, Linkedin, MapPin, CheckCircle, XCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
+
+// 🔧 Apni EmailJS details yahan daalo:
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'
 
 export default function Contact() {
   const ref = useRef(null)
+  const formRef = useRef(null)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [status, setStatus] = useState('idle') // idle | sending | sent
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,11 +25,26 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setStatus('sending')
-    setTimeout(() => {
-      setStatus('sent')
-      setForm({ name: '', email: '', message: '' })
-      setTimeout(() => setStatus('idle'), 4000)
-    }, 1500)
+
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
+      to_name: 'Harshal',
+    }
+
+    emailjs
+      .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+      .then(() => {
+        setStatus('sent')
+        setForm({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus('idle'), 5000)
+      })
+      .catch((err) => {
+        console.error('EmailJS Error:', err)
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 5000)
+      })
   }
 
   const contacts = [
@@ -99,6 +121,13 @@ export default function Contact() {
                   <CheckCircle size={48} className="text-green-400 mx-auto animate-bounce" />
                   <p className="text-white font-semibold text-lg">Message Sent!</p>
                   <p className="text-slate-400 text-sm">Thanks for reaching out. I'll get back to you soon!</p>
+                </div>
+              ) : status === 'error' ? (
+                <div className="text-center py-12 space-y-3">
+                  <XCircle size={48} className="text-red-400 mx-auto" />
+                  <p className="text-white font-semibold text-lg">Something went wrong!</p>
+                  <p className="text-slate-400 text-sm">Please try again or email me directly at harshalkatware@email.com</p>
+                  <button onClick={() => setStatus('idle')} className="mt-2 px-4 py-2 rounded-xl glass text-slate-300 hover:text-white text-sm transition-all">Try Again</button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
