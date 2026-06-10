@@ -34,7 +34,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="reveal text-center mb-16">
-          <span className="font-mono text-blue-400 text-sm tracking-widest uppercase">Who I Am</span>
+          <span className="font-mono text-blue-400 text-sm tracking-widest uppercase">Who I Am info about me </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
@@ -52,7 +52,7 @@ export default function About() {
                   HK
                 </div>
                 <h3 className="text-2xl font-bold text-white">Harshal Katware</h3>
-                <p className="text-blue-400 font-mono text-sm mt-1">Full Stack Java Developer</p>
+                <p className="text-blue-400 font-mono text-sm mt-1">Full Stack Java Developer and web devloper </p>
                 <div className="flex justify-center gap-2 mt-3">
                   <span className="px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs border border-blue-500/30">Java</span>
                   <span className="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs border border-purple-500/30">Spring Boot</span>
