@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 
 // 🔧 Apni EmailJS details yahan daalo:
 const EMAILJS_SERVICE_ID = 'service_k5wodq9'
-const EMAILJS_TEMPLATE_ID = 'template_deoewfl'
+const EMAILJS_TEMPLATE_ID = 'template_7sni4xr'
 const EMAILJS_PUBLIC_KEY = 'V5JOAKTYmIiEV6_aP'
 
 export default function Contact() {
