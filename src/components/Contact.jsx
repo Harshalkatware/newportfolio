@@ -50,7 +50,7 @@ export default function Contact() {
   const contacts = [
     { icon: <Mail size={20} />, label: 'Email', value: 'katwareharshal@gmail.com', href: 'mailto:harshalkatware@email.com', color: 'from-blue-500 to-cyan-500' },
     { icon: <Github size={20} />, label: 'GitHub', value: 'Harshalkatware', href: 'https://github.com/Harshalkatware', color: 'from-slate-600 to-slate-500' },
-    { icon: <Linkedin size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/harshalkatware', href: 'https://linkedin.com/in/harshalkatware', color: 'from-blue-600 to-blue-500' },
+    { icon: <Linkedin size={20} />, label: 'LinkedIn', value: 'linkedin.com/in/harshalkatware', href: 'https://www.linkedin.com/in/harshal-katware-324220236/?skipRedirect=true', color: 'from-blue-600 to-blue-500' },
     { icon: <MapPin size={20} />, label: 'Location', value: 'Maharashtra, India', href: '#', color: 'from-green-500 to-emerald-500' },
   ]
 
