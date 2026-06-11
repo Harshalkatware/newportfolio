@@ -15,7 +15,7 @@ const projects = [
     demo: '#',
   },
   {
-    title: 'Hotel  Management System for patil dhaba ',
+    title: 'Hotel  Management System  ',
     emoji: '🎓',
     description: 'Comprehensive system for managing student records, attendance, grades, and course enrollment with role-based access control.',
     tags: ['Java', 'Spring Boot', 'SQL', 'Tailwind CSS'],
@@ -38,18 +38,18 @@ const projects = [
     github: 'https://github.com/Harshalkatware/Portfolio',
     demo: 'https://portfolio-harshalkatware.vercel.app',
   },
-  {
-    title: 'Task Management App',
-    emoji: '✅',
-    description: 'Productivity application with task tracking, priority management, due date reminders, and collaborative features.',
-    tags: ['Java', 'Spring Boot', 'JavaScript', 'CSS3'],
-    color: 'from-green-500/20 to-emerald-500/20',
-    border: 'hover:border-green-500/40',
-    accent: 'text-green-400',
-    stars: 9,
-    github: 'https://github.com/Harshalkatware',
-    demo: '#',
-  },
+  // {
+  //   title: 'Task Management App',
+  //   emoji: '✅',
+  //   description: 'Productivity application with task tracking, priority management, due date reminders, and collaborative features.',
+  //   tags: ['Java', 'Spring Boot', 'JavaScript', 'CSS3'],
+  //   color: 'from-green-500/20 to-emerald-500/20',
+  //   border: 'hover:border-green-500/40',
+  //   accent: 'text-green-400',
+  //   stars: 9,
+  //   github: 'https://github.com/Harshalkatware',
+  //   demo: '#',
+  // },
 ]
 
 export default function Projects() {
