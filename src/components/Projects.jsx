@@ -15,7 +15,7 @@ const projects = [
     demo: '#',
   },
   {
-    title: 'Hotel  Management System',
+    title: 'Hotel  Management System for patil dhaba ',
     emoji: '🎓',
     description: 'Comprehensive system for managing student records, attendance, grades, and course enrollment with role-based access control.',
     tags: ['Java', 'Spring Boot', 'SQL', 'Tailwind CSS'],
