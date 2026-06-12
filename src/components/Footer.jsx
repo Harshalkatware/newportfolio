@@ -4,13 +4,13 @@ export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <footer className="relative border-t border-slate-800/60 bg-[#0a1120]">
+    <footer className="relative" style={{ borderTop: '1px solid rgba(59,130,246,0.15)', background: '#0F172A' }}>
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo + Text */}
           <div className="text-center md:text-left">
             <div className="flex items-center gap-2 justify-center md:justify-start mb-2">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}>
                 <Code2 size={15} className="text-white" />
               </div>
               <span className="font-mono font-bold text-lg gradient-text">HK.</span>
@@ -24,10 +24,11 @@ export default function Footer() {
           {/* Nav Links */}
           <div className="hidden md:flex gap-6">
             {['Home', 'About', 'Skills', 'Projects', 'Contact'].map(link => (
-              <button
-                key={link}
+              <button key={link}
                 onClick={() => document.getElementById(link.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
-                className="text-slate-500 hover:text-blue-400 transition-colors text-sm"
+                className="text-slate-500 text-sm transition-colors"
+                onMouseEnter={e => e.target.style.color = '#22D3EE'}
+                onMouseLeave={e => e.target.style.color = ''}
               >
                 {link}
               </button>
@@ -39,24 +40,20 @@ export default function Footer() {
             {[
               { href: 'https://github.com/Harshalkatware', icon: <Github size={17} />, label: 'GitHub' },
               { href: 'https://linkedin.com/in/harshalkatware', icon: <Linkedin size={17} />, label: 'LinkedIn' },
-              { href: 'mailto:harshalkatware@email.com', icon: <Mail size={17} />, label: 'Email' },
+              { href: 'mailto:katwareharshal@gmail.com', icon: <Mail size={17} />, label: 'Email' },
             ].map(({ href, icon, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-9 h-9 rounded-xl glass flex items-center justify-center text-slate-500 hover:text-blue-400 hover:border-blue-500/30 transition-all"
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+                className="w-9 h-9 rounded-xl glass flex items-center justify-center text-slate-500 transition-all"
+                onMouseEnter={e => e.currentTarget.style.color = '#22D3EE'}
+                onMouseLeave={e => e.currentTarget.style.color = ''}
               >
                 {icon}
               </a>
             ))}
-            <button
-              onClick={scrollToTop}
-              className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white hover:opacity-90 hover:scale-110 transition-all shadow-lg shadow-blue-500/20 ml-1"
-              aria-label="Back to top"
-            >
+            <button onClick={scrollToTop}
+              className="w-9 h-9 rounded-xl flex items-center justify-center text-white hover:opacity-90 hover:scale-110 transition-all ml-1"
+              style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)', boxShadow: '0 0 15px rgba(59,130,246,0.25)' }}
+              aria-label="Back to top">
               <ArrowUp size={16} />
             </button>
           </div>

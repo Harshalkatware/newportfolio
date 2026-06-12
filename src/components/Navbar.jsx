@@ -24,12 +24,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <button onClick={() => scrollTo('Home')} className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-blue-500/50 transition-all">
             <Code2 size={18} className="text-white" />
           </div>
           <span className="font-mono font-bold text-lg">
             <span className="gradient-text">HK</span>
-            <span className="text-slate-400">.</span>
+            <span className="text-blue-700">.</span>
           </span>
         </button>
 
@@ -41,7 +41,7 @@ export default function Navbar() {
                 onClick={() => scrollTo(link)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   active === link
-                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                    ? 'bg-blue-500/20 text-cyan-400 border border-blue-500/30'
                     : 'text-slate-400 hover:text-white hover:bg-white/5'
                 }`}
               >{link}</button>
@@ -52,7 +52,8 @@ export default function Navbar() {
         {/* CTA */}
         <button
           onClick={() => scrollTo('Contact')}
-          className="hidden md:block px-5 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold hover:opacity-90 hover:scale-105 transition-all shadow-lg shadow-blue-500/25"
+          className="hidden md:block px-5 py-2 rounded-xl text-white text-sm font-semibold hover:opacity-90 hover:scale-105 transition-all shadow-lg shadow-blue-500/25"
+          style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}
         >
           Hire Me
         </button>
@@ -71,7 +72,7 @@ export default function Navbar() {
               {link}
             </button>
           ))}
-          <button onClick={() => scrollTo('Contact')} className="block w-full mt-2 px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold text-center">
+          <button onClick={() => scrollTo('Contact')} className="block w-full mt-2 px-4 py-3 rounded-xl text-white text-sm font-semibold text-center" style={{ background: 'linear-gradient(135deg, #3B82F6, #8B5CF6)' }}>
             Hire Me
           </button>
         </div>
