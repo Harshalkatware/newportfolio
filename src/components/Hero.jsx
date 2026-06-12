@@ -76,7 +76,7 @@ export default function Hero() {
       {/* Main Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div
+        {/* <div
           className="inline-flex items-center gap-2 px-4 py-4 rounded-full text-sm font-medium mb-8 animate-fade-in"
           style={{
             background: 'rgba(0,0,0,0.45)',
@@ -87,7 +87,7 @@ export default function Hero() {
         >
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
           Available for opportunities
-        </div>
+        </div> */}
 
         {/* Name */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-4 leading-none tracking-tight">
